@@ -18,13 +18,12 @@ struct LandMark: Hashable, Codable, Identifiable {
     var isFavorite: Bool
     
     private var imageName: String
+    private var coordinates: Coordinates
     
     var image: Image {
         Image(imageName)
     }
-    
-    private var coordinates: Coordinates
-    
+
     struct Coordinates: Hashable, Codable{
         var latitude: Double
         var longitude: Double
